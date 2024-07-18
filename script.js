@@ -52,12 +52,12 @@ L.marker([`${latitude}`,`${longitude}`], {icon: MapMarker}).addTo(map)
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
 
 
-let worldtimeapi = `http://worldtimeapi.org/api/timezone/${ip_info_timezone}`
+let worldtimeapi = `https://worldtimeapi.org/api/timezone/${ip_info_timezone}`
 async function getworldtimeapi(){
     let response = await fetch(worldtimeapi);
     return response.json()
@@ -107,7 +107,7 @@ search_btn.addEventListener("click", function(){
     let longitude = Number.parseFloat(loc_coordinates.slice(loc_coordinates.indexOf(",")+1, loc_coordinates.length))
 
 
-    let worldtimeapi = `http://worldtimeapi.org/api/timezone/${ip_info_timezone}`
+    let worldtimeapi = `https://worldtimeapi.org/api/timezone/${ip_info_timezone}`
     async function getworldtimeapi(){
         let response = await fetch(worldtimeapi);
         return response.json()
