@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik";
+    font-size: 18px;
+    color:hsl(0, 0%, 17%);
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.upper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    gap:50px;
+}
+
+.pattern_bg img{
+    width: 100vw;
+    height: 35vh;
+    object-fit: cover;
+}
+
+.title{
+    position: absolute;
+    top:50px;
+    color:white;
+    font-size: 34px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    z-index: 10;
+}
+
+.search{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 120px;
+    z-index: 10;
+}
+
+input{
+    padding: 20px;
+    border-radius: 15px 0 0 15px;
+    width: 25vw;
+    outline: none;
+    border-style: none;
+    color:hsl(0, 1%, 34%);
+    font-weight: 400;
+}
+
+.search_btn{
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    padding: 19px 10px;
+    background-color: hsl(0, 0%, 17%);
+    border-radius: 0 15px 15px 0;
+    cursor: pointer;
+}
+
+.search_btn:hover{
+    background-color: hsl(0, 1%, 34%);
+}
+
+.search_btn img{
+    width: 20px;
+}
+
+
+.add_info{
+    position: absolute;
+    top:220px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:20px;
+    max-width: 80vw;
+    background-color: white;
+    padding: 50px 30px;
+    z-index: 10;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.111);
+}
+
+.info_card{
+    width: 20vw;
+    position: relative;
+}
+
+.info_title{
+    color:hsl(0, 0%, 59%);
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.info_card:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    height: 70px;
+    right: 1px;
+    top:0;
+    background-color: rgb(205, 204, 204);
+    width: 0.1px;
+    z-index: 20;
+}
+
+.info_info{
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.info_info span{
+    font-size: 24px;
+}
+
+
+
+.lower{
+    width: 100vw;
+    height: 70vh;
+    z-index: 1;
+}
+
+@media (max-width:750px){
+    .add_info{
+        top:180px;
+        flex-direction: column;
+        width: 300px;
+        gap:14px;
+        padding:14px 10px;
+    }
+
+    .search{
+        top:100px;
+    }
+
+    input{
+        width: 230px;
+    }
+
+    .info_card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 280px;
+    }
+
+
+    .info_card:not(:last-child)::after{
+        content: "";
+        display: none;
+        position: absolute;
+        height: 70px;
+        right: 1px;
+        top:0;
+        background-color: rgb(205, 204, 204);
+        width: 0.1px;
+        z-index: 20;
+    }
+
+    .info_info{
+        text-align: center;
+    }
+
+}

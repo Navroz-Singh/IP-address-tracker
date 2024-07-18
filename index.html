@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+</head>
+
+<body>
+
+    <!-- IP Address Tracker
+
+    Search for any IP address or domain
+
+    IP Address
+    Location
+    Timezone
+    UTC       ------add offset value dynamically using the API-------
+    ISP -->
+
+    <main>
+        <div class="upper">
+
+            <div class="pattern_bg"><img src="images/pattern-bg-desktop.png" alt="pattern_bg"></div>
+
+            <div class="title">IP Address Tracker</div>
+
+            <div class="search">
+                <input id="ip_toSearch" type="text" placeholder="Search for any IP address or domain">
+                <div class="search_btn"><img src="images/icon-arrow.svg" alt="icon-arrow"></div>
+            </div>
+
+
+            <div class="add_info">
+                <div class="info_card">
+                    <div class="info_title">IP ADDRESS</div>
+                    <div id="ip_info" class="info_info">192.212.174.101</div>
+                </div>
+                <div class="info_card">
+                    <div class="info_title">LOCATION</div>
+                    <div id="location_info" class="info_info">Brooklyn NY 10001</div>
+                </div>
+                <div class="info_card">
+                    <div class="info_title">TIMEZONE</div>
+                    <div id="timezone_info" class="info_info">UTC-05:00</div>
+                </div>
+                <div class="info_card">
+                    <div class="info_title">ISP</div>
+                    <div id="isp_info" class="info_info">SpaceX Starlink</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="map" class="lower">
+
+        </div>
+    </main>
+
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
